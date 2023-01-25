@@ -1,0 +1,30 @@
+@use "_variables" as var;
+
+@use "_header";
+@use "_navbar";
+@use "_SECCION_acercaMi";
+@use "_SECCION_misSkill";
+@use "_SECCION_proyectos";
+@use "generalBotones";
+@use "_SECCION_contactar";
+@use "_SECCION_redesSociales";
+@use "_alerta";
+@use "_footer";
+
+body {
+    font-size: var.$FontSize; 
+    background-color: var.$ColorFourth;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.list-style {
+    list-style: none;
+}
+
+.content-main{
+    position   : relative;
+    padding-top: 130px;
+}

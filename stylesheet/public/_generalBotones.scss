@@ -1,0 +1,50 @@
+@use "_variables" as var;
+
+/* Para los botones que sean etiquetas "a", reseteamos el color de texto en los diferentes eventos */
+a.My-button-blue:hover,
+a.My-button-blue:active, 
+a.My-button-blue:focus  {
+   color: white;
+}
+
+@mixin My-button {
+    padding         : 5px 0px;
+    border-radius   : 50px;
+    background-color: transparent;
+    display         : block;
+    margin          : 0px auto;
+    text-decoration : none;
+    font-size       : inherit;
+    width           : 100%;
+    max-width       : 150px;
+    transition      : all 0.5s ease;
+    text-align      : center;
+}
+
+/* button blue */
+.My-button-blue {
+    @include My-button();
+
+    border          : 2px solid var.$ColorFive;
+    background-color: var.$ColorFive;
+    color           : white;
+
+    &:hover {
+        background-color: #00787c;
+        border-color    : #00787c;
+    }
+}
+
+/* button yellow */
+.My-button-yellow {
+    @include My-button();
+
+    border          : 2px solid var.$ColorThird;
+    background-color: var.$ColorThird;
+    color           : white;
+
+    &:hover {
+        background-color: #ba9f0b;
+        border-color    : #ba9f0b;
+    }
+}

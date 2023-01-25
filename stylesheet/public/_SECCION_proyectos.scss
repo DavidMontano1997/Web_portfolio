@@ -1,0 +1,40 @@
+@use "_variables" as var;
+
+#projects .projects-content-img-description {
+    display      : block;
+    width        : 100%;
+    height       : 250px;
+    overflow     : hidden;
+    border-radius: 20px;
+
+    &:hover > figure figcaption {
+        transform : translateX(0px);
+    }
+
+    figure {
+        
+        img {
+            height: 250px;
+            width : 100%;
+        }
+
+        figcaption {
+            display         : block;
+            top             : 0;
+            left            : 0;
+            background-color: var.$ColorPrimary;
+            height          : 100%;
+            width           : 100%;
+            transform       : translateX(-1000px);
+            transition      : all 1s ease;
+            color           : var.$ColorFourth;
+            font-size       : 0.8em; /* 16px */
+            padding         : 20px;
+
+            h4 {
+                color: var.$ColorThird;
+                font-weight: 900;
+            }
+        }
+    }
+}

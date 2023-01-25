@@ -1,0 +1,76 @@
+@use "_variables" as var;
+@use "_responsiveDesign" as Responsive;
+
+#navbar { 
+    background-color: var.$ColorSecond;
+    position        : absolute;
+    width           : 100%;
+    top             : 0;
+    left            : 0;
+    z-index         : 1000;
+    transition      : all 200ms ease;
+    scroll-behavior : smooth;
+
+    nav {
+        position: relative;
+
+        #navbar-content-item {
+            position: relative;
+
+            // yellow bar
+            #navbar-yellow-bar {
+                height          : 6px;
+                padding         : 0px;
+                width           : 0px;
+                background-color: var.$ColorThird;
+                display         : block;
+                position        : absolute;
+                bottom          : 0;
+                z-index         : 2;
+                right           : 570px;
+                transition      : all 350ms ease-in;
+
+                @include Responsive.MediaQueri("xs","port"){
+                    right : 760px;
+                }
+            }
+
+            // links
+            div {
+                // corregir la orientacion de pantalla, ya debe ser lanscape
+                @include Responsive.MediaQueri("lg","port"){
+                    width: 190px;
+                }
+            }
+
+            div li a {
+                height     : calc(100vh - 89vh);
+                display    : block;
+                line-height: calc(100vh - 89vh);
+                color      : var.$ColorFourth;
+                font-size  : 1.5625rem; /* 25px */
+                font-weight: 900;
+            }
+
+            @include Responsive.MediaQueri("lg","land"){
+                width : 760px;
+            }
+
+            @include Responsive.MediaQueri("lg","port"){
+                width : 760px;
+            }
+
+            @include Responsive.MediaQueri("xs","port"){
+                width: 950px;
+            }
+        }
+    }
+
+    @include Responsive.MediaQueri("lg","land"){
+        overflow: scroll;
+    }
+
+    @include Responsive.MediaQueri("lg","port"){
+        overflow: scroll;
+    }
+}

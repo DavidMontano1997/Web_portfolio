@@ -1,0 +1,29 @@
+$breakpoints: (
+    "lg": "1000px",
+    "md": "762px",
+    "sm": "500px",
+    "xs": "400px"
+);
+
+$orientation: (
+    "land": "landscape",
+    "port": "portrait",
+);
+
+@mixin MediaQueri($breakpoint:null,$MyOrientation:null){
+    // validamos que parametro $breakpoint exista en nuestro mapa
+    @if(map-has-key($breakpoints, $breakpoint)){
+
+        // validamos que parametro $MyOrientation exista en nuestro mapa
+        @if(map-has-key($orientation,$MyOrientation)){
+            @media screen and (max-width: #{map-get($breakpoints,$breakpoint)}) and (orientation:#{map-get($orientation,$MyOrientation)}) {
+                @content;
+            };
+        } @else {
+            @error "El valor de la variable >>> $MyOrientation <<<, no existe en nuestro mapa de horientaciones."
+        };
+
+    }@else {
+        @error "El valor de la variable >>> $breakpoint <<<, no existe en nuestro mapas de puntos de interrupcion."
+    }
+};

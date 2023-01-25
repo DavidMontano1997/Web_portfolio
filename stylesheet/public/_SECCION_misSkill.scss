@@ -1,0 +1,74 @@
+@use "_variables" as var;
+
+.section-container #skill .item-skill .skill_container_svg_tooltip {
+    display        : flex;
+    justify-content: center;
+    width          : 120px;
+    height         : 120px;
+    padding        : 0px;
+    margin         : 10px auto;
+    transition     : all 5s ease;
+    position       : relative;
+
+    // evento hover para que aparezca el tooltip
+    &:hover ._tooltip {
+        opacity  : 1;
+        transform: translateY(0px);
+    }
+
+    // imagenes
+    svg {
+        display : block;
+        width   : 100%;
+        height  : 100%;
+        z-index : 2;
+    }
+
+    ._tooltip {
+        z-index   : 1;
+        display   : block;
+        opacity   : 0;
+        transition: all 1s ease;
+        position  : absolute;
+        bottom    : -25px;
+        transform : translateY(-50px);
+
+        span {
+            color           : var.$ColorFourth;
+            background-color: var.$ColorSecond;
+            font-size       : 0.75rem; /* 12px*/
+            border-radius   : 4px;
+            position        : relative;
+
+            &::before {
+                content            : " ";
+                border             : 5px solid var.$ColorSecond;
+                border-bottom-color: transparent;
+                border-right-color : transparent;
+                position           : absolute;
+                top                : -4px;
+                right              : calc(50% - 5px);
+                transform          : rotate(45deg);
+            }
+        }
+    }
+}
+
+// estilos de las imagenes svg 
+.section-container  #skill .item-skill .skill_container_svg_tooltip svg {
+
+    // svg html5
+    #skill-html5 { filter: invert(32%) sepia(69%) saturate(2045%) hue-rotate(352deg) brightness(95%) contrast(88%); }
+
+    // svg css3
+    #skill-css3 {  filter: invert(25%) sepia(99%) saturate(1879%) hue-rotate(219deg) brightness(88%) contrast(105%); }
+
+    // svg javascript
+    #skill-javascript { filter: invert(80%) sepia(88%) saturate(628%) hue-rotate(344deg) brightness(105%) contrast(94%); }
+
+    // svg boostrap
+    #skill-bootstrap { filter: invert(35%) sepia(60%) saturate(684%) hue-rotate(223deg) brightness(89%) contrast(84%); }
+
+    // svg sass
+    #skill-sass { filter: invert(54%) sepia(34%) saturate(4370%) hue-rotate(300deg) brightness(90%) contrast(87%); }
+}

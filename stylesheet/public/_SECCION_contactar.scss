@@ -1,0 +1,47 @@
+@use "_variables" as var;
+
+#contact #container-form-contact .box-input-label {
+    width : 100%;
+    height: auto;
+
+    .form-label {
+        top             : 6px;
+        left            : 12px;
+        height          : auto;
+        line-height     : auto;
+        background-color: white;
+        font-size       : 1.25rem;  /* 20px */
+        display         : block;
+        color           : #a7a7a7;
+    
+        transition: 
+            top 200ms ease-in,
+            font-size 200ms ease-in;
+    }
+
+    input, textarea {
+        border   : 2px solid #a7a7a7;
+        color    : #6c757d;
+        font-size: 1.25rem;
+
+        &:focus {
+            outline     : 0;
+            box-shadow  : none;
+            border-color:  var.$ColorPrimary;
+        }
+    }
+}
+
+#contact #container-form-contact .box-input-label input:focus ~ .form-label,
+#contact #container-form-contact .box-input-label textarea:focus ~ .form-label,
+#contact #container-form-contact .box-input-label input:not(:placeholder-shown)  ~ .form-label,
+#contact #container-form-contact .box-input-label textarea:not(:placeholder-shown) ~ .form-label{
+    top  : -15px;
+    font-size: 1rem;
+    color: var.$ColorPrimary;
+}
+
+#contact #container-form-contact .box-input-label input:not(:placeholder-shown),
+#contact #container-form-contact .box-input-label textarea:not(:placeholder-shown)  {
+    border-color:  var.$ColorPrimary;
+}

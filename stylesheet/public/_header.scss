@@ -1,0 +1,71 @@
+@use "_variables" as var;
+@use "_responsiveDesign" as Responsive;
+
+#header-container {
+    background-color: var.$ColorPrimary;
+
+    header {
+        height     : 89vh;
+        width      : 100%;
+        line-height: 3.125em;/* 50px */
+        font-weight: 900;
+        font-size  : 1rem; /* 16px */
+
+        #content-my-presentation {
+            display: block;
+            width  : 46.875em;
+
+            #Bienvenido {
+                font-size: 6.875em; /* 110px */
+                color    : var.$ColorFourth;
+                width    : 100%;               
+                word-wrap: break-word;
+                display  : block;
+
+                @include Responsive.MediaQueri("xs","port"){
+                    line-height: 100%;
+                }
+            }
+
+            #Me-presento {
+                font-size : 3.125em; /* 50px */
+                color     : var.$ColorThird;
+                margin-top: 1.2em; /* 60px */
+                width     : 100%;
+                display   : block;
+                word-wrap : break-word;
+
+                @include Responsive.MediaQueri("xs","port"){
+                    width : 100%;
+                }
+            }
+
+            @include Responsive.MediaQueri("md","land"){
+                width  : 100%;
+                display: block;
+            }
+
+            @include Responsive.MediaQueri("sm","port"){
+                width  : 100%;
+                display: block;
+            }
+
+            @include Responsive.MediaQueri("xs","port"){
+                width  : 350px;
+                display: block;
+            }
+        }
+
+        @include Responsive.MediaQueri("md","land"){
+            font-size: 12px;
+        }
+
+        @include Responsive.MediaQueri("sm","port"){
+            font-size: 10.5px;
+        }
+
+        @include Responsive.MediaQueri("xs","port"){
+            font-size: 13px;
+        }
+    }
+}

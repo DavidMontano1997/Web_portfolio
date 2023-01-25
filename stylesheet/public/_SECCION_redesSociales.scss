@@ -1,0 +1,38 @@
+@use "_responsiveDesign" as Responsive;
+
+// hola erick
+#contact #contact-group-list-social-media ul {
+    display : block;
+
+    li span {
+        display : inline-block;
+
+        &:nth-child(1) {
+            width : 120px;
+
+            @include Responsive.MediaQueri("lg","land"){
+                display: block;
+                width  : 100%;
+            }
+
+            @include Responsive.MediaQueri("lg","port"){
+                display: block;
+                width  : 100%;
+            }
+        }
+
+        &:nth-child(2) {
+            @include Responsive.MediaQueri("lg","land"){
+                display: block;
+                width  : 85%;
+                margin : 0px auto;;
+            }
+
+            @include Responsive.MediaQueri("lg","port"){
+                display: block;
+                width  : 85%;
+                margin : 0px auto;;
+            }
+        }
+    }
+}

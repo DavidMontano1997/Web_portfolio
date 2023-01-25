@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Pronostico del clima",
+        "review": "App que ofrece un pronostico del tiempo, por medio del consumo de una api.",
+        "link": "https://gwoulgbwtcx1fnena8op7w.on.drv.tw/Escritorio/Portafolio_de_desarrollo_web/CURSO_JAVASCRIPT/PRACTICA/ProyectoClimaAPI/",
+        "image": "imagen2.png"
+    },
+    {
+        "title": "Cotizador de criptomonedas",
+        "review": "App que ofrece estadisticas de una criptomoneda, por medio del consumo de una api.",
+        "link": "https://gwoulgbwtcx1fnena8op7w.on.drv.tw/Escritorio/Portafolio_de_desarrollo_web/CURSO_JAVASCRIPT/PRACTICA/ProyectoClimaAPI/",
+        "image": "imagen3.png"
+    }
+]
